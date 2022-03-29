@@ -17,7 +17,7 @@
 
 <body>
 <nav class="navbar navbar-light navbar-expand-lg navigation-clean">
-        <div class="container"><a class="navbar-brand" href="#">CRUD APP</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand" href="main.php">CRUD APP</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="ajouter.php">Ajouter Etudiant</a></li>

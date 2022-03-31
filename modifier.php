@@ -29,9 +29,15 @@
     </nav>
     <section class="contact-clean">
         <form method="post">
+            <?php if(isset($_POST['modifier'])){
+                        echo '<div class="alert alert-success" role="alert">
+                        Information modifiées. <a href = "liste.php"> Retourner vers la liste.</a>
+                      </div>';
+            };
+            ?>
             <h2 class="text-center">Modification pour <?php echo $_GET['cne'];?></h2>
             <div class="mb-3"><input class="form-control" type="text" name="cne" placeholder="<?php echo $_GET['cne'];?>" disabled></div>
-            <div class="mb-3"><input class="form-control" type="text" name="nom" placeholder="Nouveau nom"></div>
+            <div class="mb-3"><input autofocus class="form-control" type="text" name="nom" placeholder="Nouveau nom"></div>
             <div class="mb-3"><input class="form-control" type="text" name="prenom" placeholder="Nouveau Prenom"></div>
             <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Nouvelle adresse email" rows="14"></div>
             <div class="mb-3"><button name = "modifier" class="btn btn-primary" type="submit">Modifer</button></div>
@@ -40,15 +46,13 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <?php
         if (isset($_POST['modifier']) == "POST") {
-        $cne= $_POST["cne"];    
+        $cne= $_GET["cne"];    
         $nom = $_POST["nom"];
         $prenom = $_POST["prenom"];
         $email= $_POST["email"];
         $sql = "UPDATE etudiant SET nom = '$nom', prenom = '$prenom', email = '$email' WHERE cne='".$_GET['cne']."'";
         mysqli_query($conn, $sql);
-        echo '<div class="alert alert-success" role="alert">
-        Information modifiées.<a href = "liste.php">Retourner vers la liste.</a>
-      </div>';
+
     }
 
     ?>

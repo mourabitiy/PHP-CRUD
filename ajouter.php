@@ -33,7 +33,7 @@
                 }
             ?>
             <h2 class="text-center">Ajouter étudiant</h2>
-            <div class="mb-3"><input class="form-control" type="text" name="cne" placeholder="CNE"></div>
+            <div class="mb-3"><input autofocus class="form-control" type="text" name="cne" placeholder="CNE"></div>
             <div class="mb-3"><input class="form-control" type="text" name="nom" placeholder="Nom"></div>
             <div class="mb-3"><input class="form-control" type="text" name="prenom" placeholder="Prenom"></div>
             <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="email" rows="14"></div>
